@@ -1,0 +1,14 @@
+{
+    "23503": {
+        "description": "Violates foreign key constraint",
+        "status_code": 422
+    },
+    "23505": {
+        "description": "Duplicate key value violates unique constraint",
+        "status_code": 422
+    },
+    "500": {
+        "description": "Internal server error",
+        "status_code": 500
+    }
+}

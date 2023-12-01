@@ -1,0 +1,43 @@
+# IDE
+.idea
+.vscode
+
+# Config
+.env
+.env_dev
+.env_hml
+.env_prd
+.env_old
+env.json
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+teste.go
+bin/
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+*.xml
+*.js
+*.old
+*.old2
+*_old
+*_old2
+
+# Dependency directories (remove the comment below to include it)
+vendor/
+lint/
+coverange/
+data/
+docker/
+my-tpl/
+tests/
+models2/
+lint/
