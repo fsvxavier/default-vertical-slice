@@ -6,7 +6,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	"github.com/fsvxavier/default-vertical-slice/internal/core/services"
+	"github.com/fsvxavier/default-vertical-slice/internal/app/healthcheck/core/services"
 	"github.com/fsvxavier/default-vertical-slice/pkg/database/redis"
 )
 

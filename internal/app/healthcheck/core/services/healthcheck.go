@@ -9,16 +9,17 @@ import (
 	"github.com/gomodule/redigo/redis"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	rep "github.com/fsvxavier/default-vertical-slice/internal/adapters/repositories"
-	"github.com/fsvxavier/default-vertical-slice/internal/core/commons/constants"
-	"github.com/fsvxavier/default-vertical-slice/internal/core/domains"
-	"github.com/fsvxavier/default-vertical-slice/internal/core/ports"
+	"github.com/fsvxavier/default-vertical-slice/internal/app/commons/constants"
+	rep "github.com/fsvxavier/default-vertical-slice/internal/app/healthcheck/adapters/repositories"
+	"github.com/fsvxavier/default-vertical-slice/internal/app/healthcheck/core/domains"
+	"github.com/fsvxavier/default-vertical-slice/internal/app/healthcheck/core/ports"
+	rports "github.com/fsvxavier/default-vertical-slice/pkg/database/redis/ports"
 	"github.com/fsvxavier/default-vertical-slice/pkg/httpclient/nethttp"
 )
 
 type healthcheckService struct {
 	Db     *pgxpool.Conn
-	Redigo ports.IRedigoRepository
+	Redigo rports.IRedigoRepository
 }
 
 func NewHealthCheckService(db *pgxpool.Conn, rdbConn redis.Conn) ports.IHealthCheckService {

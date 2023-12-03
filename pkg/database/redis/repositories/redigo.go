@@ -6,7 +6,7 @@ import (
 	rgo "github.com/gomodule/redigo/redis"
 	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
 
-	"github.com/fsvxavier/default-vertical-slice/internal/core/ports"
+	"github.com/fsvxavier/default-vertical-slice/pkg/database/redis/ports"
 )
 
 //go:generate ifacemaker -D -f redis.go -s RedisRepository -i IRedisRepository -p repositories -o ../interfaces/repositories/redis.go
