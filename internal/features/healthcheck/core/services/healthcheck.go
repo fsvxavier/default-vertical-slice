@@ -9,7 +9,7 @@ import (
 	"github.com/gomodule/redigo/redis"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	"github.com/fsvxavier/default-vertical-slice/internal/commons/constants"
+	"github.com/fsvxavier/default-vertical-slice/internal/features/commons/constants"
 	rep "github.com/fsvxavier/default-vertical-slice/internal/features/healthcheck/adapters/repositories"
 	"github.com/fsvxavier/default-vertical-slice/internal/features/healthcheck/core/domains"
 	"github.com/fsvxavier/default-vertical-slice/internal/features/healthcheck/core/ports"

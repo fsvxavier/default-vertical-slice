@@ -3,7 +3,7 @@ package config
 import (
 	"os"
 
-	cstt "github.com/fsvxavier/default-vertical-slice/internal/commons/constants"
+	cstt "github.com/fsvxavier/default-vertical-slice/internal/features/commons/constants"
 )
 
 type Config struct {
