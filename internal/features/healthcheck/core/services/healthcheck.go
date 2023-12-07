@@ -10,21 +10,22 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 
 	"github.com/fsvxavier/default-vertical-slice/internal/features/commons/constants"
-	rep "github.com/fsvxavier/default-vertical-slice/internal/features/healthcheck/adapters/repositories"
 	"github.com/fsvxavier/default-vertical-slice/internal/features/healthcheck/core/domains"
 	"github.com/fsvxavier/default-vertical-slice/internal/features/healthcheck/core/ports"
+	rports "github.com/fsvxavier/default-vertical-slice/pkg/database/redis/ports"
+	rrep "github.com/fsvxavier/default-vertical-slice/pkg/database/redis/repositories"
 	"github.com/fsvxavier/default-vertical-slice/pkg/httpclient/nethttp"
 )
 
 type healthcheckService struct {
 	Db     *pgxpool.Conn
-	Redigo ports.IRedigoRepository
+	Redigo rports.IRedigoRepository
 }
 
 func NewHealthCheckService(db *pgxpool.Conn, rdbConn redis.Conn) ports.IHealthCheckService {
 	return &healthcheckService{
 		Db:     db,
-		Redigo: rep.NewRedigoRepository(rdbConn),
+		Redigo: rrep.NewRedigoRepository(rdbConn),
 	}
 }
 
