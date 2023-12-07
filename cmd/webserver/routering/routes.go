@@ -4,7 +4,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	handlers "github.com/fsvxavier/default-vertical-slice/internal/adapters/controllers/http"
+	handlers "github.com/fsvxavier/default-vertical-slice/internal/features/healthcheck/adapters/controllers/http"
 	"github.com/fsvxavier/default-vertical-slice/pkg/database/redis"
 	logger "github.com/fsvxavier/default-vertical-slice/pkg/logger/zap"
 )

@@ -13,7 +13,7 @@ import (
 	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/ext"
 	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
 
-	"github.com/fsvxavier/default-vertical-slice/internal/core/utils/helpers"
+	"github.com/fsvxavier/default-vertical-slice/internal/utils/helpers"
 	"github.com/fsvxavier/default-vertical-slice/pkg/apierrors"
 	"github.com/fsvxavier/default-vertical-slice/pkg/database/redis"
 )

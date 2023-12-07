@@ -9,10 +9,10 @@ import (
 	"github.com/gomodule/redigo/redis"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	rep "github.com/fsvxavier/default-vertical-slice/internal/adapters/repositories"
-	"github.com/fsvxavier/default-vertical-slice/internal/core/commons/constants"
-	"github.com/fsvxavier/default-vertical-slice/internal/core/domains"
-	"github.com/fsvxavier/default-vertical-slice/internal/core/ports"
+	"github.com/fsvxavier/default-vertical-slice/internal/commons/constants"
+	rep "github.com/fsvxavier/default-vertical-slice/internal/features/healthcheck/adapters/repositories"
+	"github.com/fsvxavier/default-vertical-slice/internal/features/healthcheck/core/domains"
+	"github.com/fsvxavier/default-vertical-slice/internal/features/healthcheck/core/ports"
 	"github.com/fsvxavier/default-vertical-slice/pkg/httpclient/nethttp"
 )
 

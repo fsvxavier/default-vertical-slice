@@ -10,7 +10,7 @@ import (
 
 	json "github.com/json-iterator/go"
 
-	"github.com/fsvxavier/default-vertical-slice/internal/core/utils/helpers"
+	"github.com/fsvxavier/default-vertical-slice/internal/utils/helpers"
 )
 
 var ErrNoRows = errors.New("no rows in result set")

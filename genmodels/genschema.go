@@ -6,7 +6,7 @@ import (
 	"github.com/invopop/jsonschema"
 	"github.com/samber/lo"
 
-	"github.com/fsvxavier/default-vertical-slice/internal/core/domains"
+	"github.com/fsvxavier/default-vertical-slice/internal/features/healthcheck/core/domains"
 )
 
 type SchemaValidationType string

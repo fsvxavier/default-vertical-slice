@@ -11,9 +11,9 @@ import (
 	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/ext"
 	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
 
-	domainerrors "github.com/fsvxavier/default-vertical-slice/internal/core/commons/errors"
-	"github.com/fsvxavier/default-vertical-slice/internal/core/commons/types/logs"
-	"github.com/fsvxavier/default-vertical-slice/internal/core/utils/helpers"
+	domainerrors "github.com/fsvxavier/default-vertical-slice/internal/commons/errors"
+	"github.com/fsvxavier/default-vertical-slice/internal/commons/types/logs"
+	"github.com/fsvxavier/default-vertical-slice/internal/utils/helpers"
 	"github.com/fsvxavier/default-vertical-slice/pkg/apierrors"
 	log "github.com/fsvxavier/default-vertical-slice/pkg/logger/zap"
 )
