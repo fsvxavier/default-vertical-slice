@@ -12,7 +12,7 @@ import (
 
 // On client side, we defind a simple function to call the upstream service.
 func DoReq() error {
-	resp, err := http.Get("http://localhost:8080/metrics")
+	resp, err := http.Get("http://localhost:8080/ping")
 	if err != nil {
 		return err
 	}
