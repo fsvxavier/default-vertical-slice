@@ -38,6 +38,6 @@ coverange/
 data/
 docker/
 my-tpl/
-tests/
+.tests/
 models2/
 lint/
