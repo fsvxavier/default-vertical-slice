@@ -10,35 +10,46 @@
    │   └── config.go
    │
    ├── internal
-   │    ├── adapters
-   │    │   ├── controllers (handlers) - São Adapter primários
-   │    │   │   ├── grpc.go
-   │    │   │   └── http.go
-   │    │   │
-   │    │   └── repositories - São adapters secundários
-   │    │       ├── table1.go
-   │    │       └── table2.go
-   │    │
-   │    └── core
-   │        ├── domain (models)
-   │        │   ├── inputs - Models de entrada
-   │        │   │   └── model.go
-   │        │   ├── process - Models de processamento em geral
-   │        │   │   └── model.go
-   │        │   └── output - Models de saida
-   │        │       └── model.go
-   │   	   │
-   │        ├── ports (interfaces)
-   │        │   ├── repositories - Portas dos adapters sercundários
-   │        │   └── services - Portas dos adapters primários
-   │	      │
-   │	      ├── mocks
-   │	      │
-   │        └── services (usecases)
-   │            └── services.go
-   │
+   │   ├── features
+   │   │       ├── healthcheck
+   │   │       │     ├── adapters
+   │   │       │     │   ├── controllers (handlers) - São Adapter primários
+   │   │       │     │   │   ├── grpc.go
+   │   │       │     │   │   └── http.go
+   │   │       │     │   │
+   │   │       │     │   └── repositories - São adapters secundários
+   │   │       │     │       ├── table1.go
+   │   │       │     │       └── table2.go
+   │   │       │     │
+   │   │       │     └── core
+   │   │       │         ├── domain (models)
+   │   │       │         │   ├── inputs - Models de entrada
+   │   │       │         │   │   └── model.go
+   │   │       │         │   ├── process - Models de processamento em geral
+   │   │       │         │   │   └── model.go
+   │   │       │         │   └── output - Models de saida
+   │   │       │         │       └── model.go
+   │   │       │    	    │
+   │   │       │         ├── ports (interfaces)
+   │   │       │         │   ├── repositories - Portas dos adapters sercundários
+   │   │       │         │   └── services - Portas dos adapters primários
+   │   │       │         │
+   │   │       │         ├── mocks
+   │   │       │         │
+   │   │       │         └── services (usecases)
+   │   │       │              └── services.go
+   │   │       │
+   │   │       │
+   │   │       └── commons
+   │   │           └── services.go
+   │   │       
+   │   └── utils
+   │       └── services.go
+   │   
+   │   
+   │  
    ├── lint - Pasta com o report dos lints
-   │   └── lint.html
+   │     └── lint.html
    │
    ├── pkg - Pacotes de libs que serão utilizadas no projeto
    │   ├── database
