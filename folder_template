@@ -32,9 +32,11 @@
    │   │       │    	    │
    │   │       │         ├── ports (interfaces)
    │   │       │         │   ├── repositories - Portas dos adapters sercundários
-   │   │       │         │   └── services - Portas dos adapters primários
+   │   │       │         │   └── services - Portas dos usecases
    │   │       │         │
    │   │       │         ├── mocks
+   │   │       │         │
+   │   │       │         ├── tests
    │   │       │         │
    │   │       │         └── services (usecases)
    │   │       │              └── services.go
