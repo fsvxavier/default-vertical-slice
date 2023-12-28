@@ -14,7 +14,6 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/gofiber/fiber/v2"
 	jsoniter "github.com/json-iterator/go"
 	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
 )
@@ -85,24 +84,34 @@ func (r *Requester) SetBaseURL(baseURL string) *Requester {
 	return r
 }
 
+// Head method performs the HTTP HEAD request for current `Request`.
+func (r *Requester) Head(ctx context.Context, endpoint string, body []byte) (*Response, error) {
+	return r.Execute(ctx, http.MethodHead, endpoint, bytes.NewBuffer(body))
+}
+
+// Patch method performs the HTTP PATCH request for current `Request`.
+func (r *Requester) Patch(ctx context.Context, endpoint string, body []byte) (*Response, error) {
+	return r.Execute(ctx, http.MethodPatch, endpoint, bytes.NewBuffer(body))
+}
+
 // Post method performs the HTTP POST request for current `Request`.
 func (r *Requester) Post(ctx context.Context, endpoint string, body []byte) (*Response, error) {
-	return r.Execute(ctx, fiber.MethodPost, endpoint, bytes.NewBuffer(body))
+	return r.Execute(ctx, http.MethodPost, endpoint, bytes.NewBuffer(body))
 }
 
 // Get method performs the HTTP GET request for current `Request`.
 func (r *Requester) Get(ctx context.Context, endpoint string) (*Response, error) {
-	return r.Execute(ctx, fiber.MethodGet, endpoint, nil)
+	return r.Execute(ctx, http.MethodGet, endpoint, nil)
 }
 
 // Put method performs the HTTP PUT request for current `Request`.
 func (r *Requester) Put(ctx context.Context, endpoint string, body []byte) (*Response, error) {
-	return r.Execute(ctx, fiber.MethodPut, endpoint, bytes.NewBuffer(body))
+	return r.Execute(ctx, http.MethodPut, endpoint, bytes.NewBuffer(body))
 }
 
 // Delete method performs the HTTP DELETE request for current `Request`.
 func (r *Requester) Delete(ctx context.Context, endpoint string) (*Response, error) {
-	return r.Execute(ctx, fiber.MethodDelete, endpoint, nil)
+	return r.Execute(ctx, http.MethodDelete, endpoint, nil)
 }
 
 // Unmarshal method unmarshals the HTTP response body to given struct.

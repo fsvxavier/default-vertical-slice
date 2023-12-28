@@ -87,6 +87,16 @@ func (req *Request) SetBaseURL(baseURL string) *Request {
 	return req
 }
 
+// Head method performs the HTTP HEAD request for current `Request`.
+func (req *Request) Head(ctx context.Context, endpoint string, body []byte) (*Response, error) {
+	return req.Execute(ctx, fiber.MethodHead, endpoint, body)
+}
+
+// Patch method performs the HTTP PATCH request for current `Request`.
+func (req *Request) Patch(ctx context.Context, endpoint string, body []byte) (*Response, error) {
+	return req.Execute(ctx, fiber.MethodPatch, endpoint, body)
+}
+
 // Post method performs the HTTP POST request for current `Request`.
 func (req *Request) Post(ctx context.Context, endpoint string, body []byte) (*Response, error) {
 	return req.Execute(ctx, fiber.MethodPost, endpoint, body)
