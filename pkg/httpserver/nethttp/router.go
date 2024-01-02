@@ -7,13 +7,13 @@ import (
 )
 
 type Route struct {
+	Handler http.Handler
 	Method  string
 	Pattern string
-	Handler http.Handler
 }
 type Router struct {
-	routes []Route
 	Prefix string
+	routes []Route
 }
 
 func NewRouter() *Router {

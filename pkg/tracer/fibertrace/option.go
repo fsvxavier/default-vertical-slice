@@ -18,12 +18,12 @@ const (
 )
 
 type config struct {
+	isStatusError func(statusCode int) bool
+	resourceNamer func(*fiber.Ctx) string
 	serviceName   string
 	spanName      string
-	isStatusError func(statusCode int) bool
-	spanOpts      []ddtrace.StartSpanOption // additional span options to be applied
+	spanOpts      []ddtrace.StartSpanOption
 	analyticsRate float64
-	resourceNamer func(*fiber.Ctx) string
 }
 
 // Option represents an option that can be passed to NewRouter.

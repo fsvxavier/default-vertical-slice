@@ -102,6 +102,10 @@ golint-getlinters:
 	~/go/bin/golangci-lint help linters
 .PHONY: golint-getlinters
 
+golint:
+	~/go/bin/golangci-lint run ./...
+.PHONY: golint
+
 #go install golang.org/x/tools/go/analysis/passes/fieldalignment/cmd/fieldalignment@latest
 gofieldalt:
 	~/go/bin/fieldalignment -fix ./... 

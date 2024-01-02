@@ -18,10 +18,10 @@ const ENV_DEV = "dev"
 type Field = zap.Field
 
 type Logger struct {
-	Config zap.Config
-	Out    io.Writer
-	Ctx    context.Context
 	*zap.Logger
+	Config        zap.Config
+	Out           io.Writer
+	Ctx           context.Context
 	Level         zap.AtomicLevel
 	Zlg           *zap.Logger
 	EncoderConfig zapcore.EncoderConfig

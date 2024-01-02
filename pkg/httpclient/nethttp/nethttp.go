@@ -19,21 +19,21 @@ import (
 )
 
 type Requester struct {
-	Client               *http.Client
-	Headers              map[string]string
-	BaseURL              string
-	StructUnmarshal      any
-	getConn              time.Time
-	dnsStart             time.Time
-	dnsDone              time.Time
-	connectDone          time.Time
 	tlsHandshakeStart    time.Time
-	tlsHandshakeDone     time.Time
 	gotConn              time.Time
-	gotFirstResponseByte time.Time
 	endTime              time.Time
-	gotConnInfo          httptrace.GotConnInfo
+	gotFirstResponseByte time.Time
+	connectDone          time.Time
+	dnsStart             time.Time
+	tlsHandshakeDone     time.Time
+	dnsDone              time.Time
+	getConn              time.Time
+	StructUnmarshal      any
+	Headers              map[string]string
+	Client               *http.Client
 	request              *http.Request
+	BaseURL              string
+	gotConnInfo          httptrace.GotConnInfo
 	timeoutMilliseconds  int
 }
 
