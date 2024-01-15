@@ -12,6 +12,7 @@ require (
 	github.com/gofiber/swagger v0.1.14
 	github.com/gomodule/redigo v1.8.9
 	github.com/google/uuid v1.5.0
+	github.com/gorilla/mux v1.8.0
 	github.com/invopop/jsonschema v0.12.0
 	github.com/jackc/pgx/v5 v5.5.2
 	github.com/joho/godotenv v1.5.1
@@ -25,6 +26,9 @@ require (
 	github.com/sony/gobreaker v0.5.0
 	github.com/stretchr/testify v1.8.4
 	github.com/valyala/fasthttp v1.51.0
+	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.44.0
+	go.opentelemetry.io/otel v1.20.0
+	go.opentelemetry.io/otel/trace v1.20.0
 	go.uber.org/zap v1.26.0
 	gopkg.in/DataDog/dd-trace-go.v1 v1.59.0
 )
@@ -52,8 +56,11 @@ require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/ebitengine/purego v0.5.1 // indirect
+	github.com/felixge/httpsnoop v1.0.3 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
+	github.com/go-logr/logr v1.3.0 // indirect
+	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/go-openapi/jsonpointer v0.20.2 // indirect
 	github.com/go-openapi/jsonreference v0.20.4 // indirect
@@ -106,6 +113,7 @@ require (
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	github.com/wk8/go-ordered-map/v2 v2.1.8 // indirect
 	github.com/yusufpapurcu/wmi v1.2.3 // indirect
+	go.opentelemetry.io/otel/metric v1.20.0 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go4.org/intern v0.0.0-20230525184215-6c62f75575cb // indirect
