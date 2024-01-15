@@ -3,7 +3,7 @@ run:
   concurrency: 4
   tests: false
   allow-parallel-runners: true
-  go: '1.20'
+  go: '1.21'
   modules-download-mode: mod
   skip-dirs:
     - mocks
