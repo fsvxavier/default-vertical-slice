@@ -91,6 +91,25 @@ linters-settings:
       - ifElseChain
   gofmt:
     simplify: true
+  tagliatelle:
+    # Check the struct tag name case.
+    case:
+      # Use the struct field name to check the name of the struct tag.
+      # Default: false
+      use-field-name: true
+      # `camel` is used for `json` and `yaml`, and `header` is used for `header` (can be overridden)
+      # Default: {}
+      rules:
+        # Any struct tag type can be used.
+        # Support string case: `camel`, `pascal`, `kebab`, `snake`, `upperSnake`, `goCamel`, `goPascal`, `goKebab`, `goSnake`, `upper`, `lower`, `header`
+        json: camel
+        yaml: camel
+        xml: camel
+        bson: camel
+        avro: snake
+        mapstructure: kebab
+        env: upperSnake
+        envconfig: upperSnake
   gofumpt:
     extra-rules: true
   gomnd:
@@ -625,7 +644,7 @@ linters:
   #  - structcheck
   #  - stylecheck
     - tagalign
-  #  - tagliatelle
+  # - tagliatelle
   #  - tenv
   #  - testableexamples
   #  - testpackage

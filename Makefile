@@ -116,6 +116,11 @@ tagalign:
 	~/go/bin/tagalign -fix ./...
 .PHONY: tagalign
 
+#go install github.com/ldez/tagliatelle/cmd/tagliatelle@latest
+tagliatelle:
+	~/go/bin/tagliatelle -fix ./...
+.PHONY: tagliatelle
+
 #go install github.com/vburenin/ifacemaker@latest
 gen-interfaces:
 	go generate ./...
