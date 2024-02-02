@@ -620,7 +620,7 @@ linters:
   #  - revive
   #  - rowserrcheck
   #  - scopelint
-  #  - sqlclosecheck
+    - sqlclosecheck
     - staticcheck
   #  - structcheck
   #  - stylecheck
