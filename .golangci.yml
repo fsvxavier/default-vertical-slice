@@ -639,6 +639,7 @@ linters:
   #  - revive
   #  - rowserrcheck
   #  - scopelint
+    - sloglint
     - sqlclosecheck
     - staticcheck
   #  - structcheck
